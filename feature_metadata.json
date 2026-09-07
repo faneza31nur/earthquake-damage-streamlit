@@ -1,0 +1,168 @@
+{
+  "feature_order": [
+    "count_families",
+    "foundation_type",
+    "geo_level_1_id",
+    "geo_level_2_id",
+    "geo_level_3_id",
+    "ground_floor_type",
+    "has_secondary_use",
+    "has_secondary_use_agriculture",
+    "has_secondary_use_gov_office",
+    "has_secondary_use_health_post",
+    "has_secondary_use_hotel",
+    "has_secondary_use_industry",
+    "has_secondary_use_institution",
+    "has_secondary_use_other",
+    "has_secondary_use_rental",
+    "has_secondary_use_school",
+    "has_secondary_use_use_police",
+    "land_surface_condition",
+    "legal_ownership_status",
+    "other_floor_type",
+    "plan_configuration",
+    "position",
+    "roof_type"
+  ],
+  "categorical_features": {
+    "foundation_type": [
+      "h",
+      "i",
+      "r",
+      "u",
+      "w"
+    ],
+    "ground_floor_type": [
+      "f",
+      "m",
+      "v",
+      "x",
+      "z"
+    ],
+    "land_surface_condition": [
+      "n",
+      "o",
+      "t"
+    ],
+    "legal_ownership_status": [
+      "a",
+      "r",
+      "v",
+      "w"
+    ],
+    "other_floor_type": [
+      "j",
+      "q",
+      "s",
+      "x"
+    ],
+    "plan_configuration": [
+      "a",
+      "c",
+      "d",
+      "f",
+      "m",
+      "n",
+      "o",
+      "q",
+      "s",
+      "u"
+    ],
+    "position": [
+      "j",
+      "o",
+      "s",
+      "t"
+    ],
+    "roof_type": [
+      "n",
+      "q",
+      "x"
+    ]
+  },
+  "binary_features": [
+    "has_secondary_use",
+    "has_secondary_use_agriculture",
+    "has_secondary_use_gov_office",
+    "has_secondary_use_health_post",
+    "has_secondary_use_hotel",
+    "has_secondary_use_industry",
+    "has_secondary_use_institution",
+    "has_secondary_use_other",
+    "has_secondary_use_rental",
+    "has_secondary_use_school",
+    "has_secondary_use_use_police"
+  ],
+  "numeric_features": {
+    "count_families": {
+      "min": 0,
+      "max": 9,
+      "median": 1
+    },
+    "geo_level_2_id": {
+      "min": 0,
+      "max": 1427,
+      "median": 706
+    },
+    "geo_level_3_id": {
+      "min": 0,
+      "max": 12567,
+      "median": 6271
+    }
+  },
+  "geo_level_1_options": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "class_names": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "model_info": {
+    "algorithm": "HistGradientBoosting",
+    "best_params": {
+      "classifier__max_leaf_nodes": 63,
+      "classifier__max_iter": 200,
+      "classifier__max_depth": 15,
+      "classifier__learning_rate": 0.2,
+      "classifier__l2_regularization": 1.0,
+      "classifier__class_weight": "balanced"
+    },
+    "test_accuracy": 0.6666906495524794,
+    "test_macro_f1": 0.671209260218992,
+    "cv_accuracy_mean": 0.6651902741420621,
+    "cv_accuracy_std": 0.0018093366492262437,
+    "cv_macro_f1_mean": 0.6696170788974478,
+    "cv_macro_f1_std": 0.0016768032578682555
+  }
+}
