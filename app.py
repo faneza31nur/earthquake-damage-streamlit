@@ -88,7 +88,34 @@ meta = load_metadata()
 FEATURE_ORDER = meta["feature_order"]
 CLASS_NAMES = meta["class_names"]
 
-categorical = meta["categorical_features"]
+# ============================================================
+# GET CATEGORIES DIRECTLY FROM MODEL
+# ============================================================
+
+preprocessor = model.named_steps["preprocessor"]
+
+categorical_transformer = preprocessor.named_transformers_["categorical"]
+
+encoder = categorical_transformer.named_steps["ohe"]
+
+encoded_categories = encoder.categories_
+
+categorical_columns = [
+    "foundation_type",
+    "ground_floor_type",
+    "land_surface_condition",
+    "legal_ownership_status",
+    "other_floor_type",
+    "plan_configuration",
+    "position",
+    "roof_type",
+    "geo_level_1_id"
+]
+
+categorical = {
+    col: list(cats)
+    for col, cats in zip(categorical_columns, encoded_categories)
+}
 
 
 # ============================================================
